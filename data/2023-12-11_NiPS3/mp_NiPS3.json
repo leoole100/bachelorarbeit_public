@@ -1,0 +1,58 @@
+{
+  "crystal_structure": {
+    "lattice": {
+      "lattice_kind": "Conventional",
+      "a": "5.82 Å",
+      "b": "10.08 Å",
+      "c": "6.90 Å",
+      "α": "90.00 º",
+      "β": "106.22 º",
+      "ɣ": "90.00 º",
+      "Volume": "388.58 Å³"
+    },
+    "atomic_positions": [
+      {
+        "wyckoff": "4g",
+        "element": "Ni",
+        "x": "1/2",
+        "y": "0.833132",
+        "z": "0"
+      },
+      {
+        "wyckoff": "4i",
+        "element": "P",
+        "x": "0.944786",
+        "y": "0",
+        "z": "0.835119"
+      },
+      {
+        "wyckoff": "4i",
+        "element": "S",
+        "x": "0.730479",
+        "y": "0",
+        "z": "0.229346"
+      },
+      {
+        "wyckoff": "8j",
+        "element": "S",
+        "x": "0.75083",
+        "y": "0.827122",
+        "z": "0.770769"
+      }
+    ],
+    "symmetry": {
+      "crystal_system": "Monoclinic",
+      "lattice_system": "Monoclinic",
+      "hall_number": "-C 2y",
+      "international_number": 12,
+      "symbol": "C2/m",
+      "point_group": "2/m"
+    },
+    "structure_meta": {
+      "number_of_atoms": 20,
+      "density": "3.18 g·cm⁻³",
+      "dimensionality": "",
+      "possible_oxidation_states": "S²⁻, Ni²⁺, P⁴⁺"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.conda
+conda
+.venv
+venv
+
+# latex stuff
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.DS_Store
+*.nav
+*.snm
+*.tdo
+*.bcf
+*.run.xml
+
+# python stuff
+.ipynb_checkpoints
+
+# editors
+.vscode
+.idea
+
+__pycache__
+
+Thumbs.db

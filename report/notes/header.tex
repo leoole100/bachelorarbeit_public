@@ -1,0 +1,47 @@
+\setbeamertemplate{navigation symbols}{}
+\usepackage{xcolor}
+\definecolor{seeblau}{HTML}{00A9E0}
+\setbeamercolor{structure}{fg=seeblau}
+
+
+\usepackage[english]{babel}
+\parskip=20pt
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{physics}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{markdown}
+
+\usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{arimo}
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage{libertinust1math} \usefonttheme[onlymath]{serif}
+
+% emphasize by bold
+\renewcommand{\emph}[1]{\textbf{#1}}
+
+% make section frames
+\newcommand{\sectionframe}{
+    \begin{frame}
+        \tableofcontents[currentsection]
+    \end{frame}
+}
+
+\newcommand{\subsectionframe}{
+    \begin{frame}
+        \tableofcontents[currentsubsection]
+    \end{frame}
+}
+
+% define full graphics command
+\newcommand{\fullgraphic}[1]{
+    \begin{figure}[H]
+        \begin{center}
+            \includegraphics[width=\textwidth, height=.85\textheight, keepaspectratio]{#1}
+        \end{center}
+    \end{figure}
+}
+
