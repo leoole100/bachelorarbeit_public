@@ -1,0 +1,133 @@
+\usepackage{xcolor}
+\definecolor{seeblau}{HTML}{00A9E0}
+\definecolor{seegrau}{HTML}{9AA0A7}
+
+\definecolor{seeblau1}{HTML}{CCEEF9}
+\definecolor{seeblau2}{HTML}{A6E1F4}
+\definecolor{seeblau3}{HTML}{59C7EB}
+\definecolor{seeblau4}{HTML}{00A9E0}
+\definecolor{seeblau5}{HTML}{008ECE}
+
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+\usepackage[english]{babel}
+\usepackage{blindtext}
+\usepackage{marginnote}
+\usepackage{microtype}
+\usepackage{siunitx}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage{nicefrac}
+\usepackage[T1]{fontenc}
+
+\usepackage{siunitx}
+
+% select serif font ###########################################################
+% \usepackage[rm]{libertinus-type1}
+% \usepackage{libertinus}
+% \usepackage{roboto-serif}
+\usepackage{libertinus}
+% \usepackage[sfdefault, scaled=1.05]{biolinum}
+% \usepackage{charter}	% designed for 300dpi print
+% select sans serif font ######################################################
+\usepackage{roboto}
+% select math font ###########################################################
+% \usepackage{newtxmath}
+% \usepackage{sfmath} % sans serif math based on fira sans?
+% \usepackage{eulervm}
+% \usepackage[scaled=1.063]{libertinust1math}
+% \usepackage{notomath}
+% \usepackage{unicode-math}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+
+\setkomafont{disposition}{\normalfont\sffamily}
+
+% not recommended with KOMA-script
+\usepackage{tocloft}
+\renewcommand\cftchappagefont{\normalfont}
+\renewcommand\cftchapfont{\normalfont}
+\renewcommand\cftchappresnum{\bfseries}
+\renewcommand\cftchapaftersnum{}
+\renewcommand{\cftchapfont}{\sffamily}
+\renewcommand{\cftsecfont}{\sffamily}
+\renewcommand{\cftsubsecfont}{\sffamily}
+\renewcommand{\cftchappagefont}{\sffamily}
+\renewcommand{\cftsecpagefont}{\sffamily}
+\renewcommand{\cftsubsecpagefont}{\sffamily}
+
+
+% change to colored underline
+% \setkomafont{chapter}{\color{seeblau}\Huge\bfseries}
+% \setkomafont{section}{\color{seeblau}\Large\bfseries}
+% \setkomafont{chapter}{\Huge\bfseries\adjustbox{padding=3pt, bgcolor=seeblau, margin=-1pt}}
+
+% caption
+\usepackage{caption}
+\captionsetup{
+	% font={sf},
+	labelfont={sf, bf, color=seeblau},
+	labelsep=quad,
+	labelformat=simple,
+}
+
+% links
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=seeblau,
+	citecolor=seeblau,
+	urlcolor=seeblau,
+	% hidelinks=true
+}
+
+% bibliography
+\usepackage[
+	style=numeric-comp, % comp = compressed 4,5,6,7 -> 4-7
+	sorting=none,		% Sort by appearance
+	% autocite = superscript,
+	% backref=true,
+	hyperref=true,
+	url=true,
+	% maxbibnames=100
+]{biblatex}
+\addbibresource{../literature.bib}
+\DefineBibliographyStrings{english}{%
+    backrefpage  = {see p.}, % for single page number
+    backrefpages = {see pp.} % for multiple page numbers
+}
+
+\usepackage{float}
+\floatplacement{figure}{H}
+\floatplacement{table}{H}
+
+% loosen float placement rules
+\renewcommand{\topfraction}{0.3}
+\renewcommand{\bottomfraction}{.8}
+% \renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{.9}
+% make floats less likely to be placed on a separate page
+% \setcounter{totalnumber}{9}
+% \setcounter{topnumber}{9}
+% \setcounter{bottomnumber}{9}
+
+% decrease space between floats and text
+\setlength{\textfloatsep}{0.5cm}
+\setlength{\floatsep}{0.5cm}
+% decrease space between figure and caption
+\setlength{\abovecaptionskip}{0.2cm}
+\setlength{\belowcaptionskip}{0.2cm}
+
+
+\usepackage{adjustbox}
+
+\usepackage{datetime}
+\newdateformat{dotdate}{
+	\twodigit{\THEDAY}.\twodigit{\THEMONTH}.\THEYEAR
+}
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH] \THEYEAR}

@@ -17,7 +17,7 @@ def hide_inner_label():
         try: ax.label_outer()
         except: pass
 
-def energy_ticks(ax = None, locator=True):
+def energy_ticks(ax = None, locator=True, n_ticks=5):
     """
     Add energy axis ticks to the top of the plot.   
     Assumes that the x-axis is wavelength in nm.   
@@ -30,7 +30,7 @@ def energy_ticks(ax = None, locator=True):
     
     # fix overlapping tick labels
     if locator: 
-        secax.xaxis.set_major_locator(ticker.MaxNLocator(nbins=5, prune='both'))
+        secax.xaxis.set_major_locator(ticker.MaxNLocator(nbins=n_ticks, prune='both'))
     return secax
 
 
