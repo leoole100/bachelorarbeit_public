@@ -43,6 +43,7 @@
 % \usepackage{unicode-math}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{todonotes}
 
 
 \setkomafont{disposition}{\normalfont\sffamily}
@@ -59,12 +60,6 @@
 \renewcommand{\cftchappagefont}{\sffamily}
 \renewcommand{\cftsecpagefont}{\sffamily}
 \renewcommand{\cftsubsecpagefont}{\sffamily}
-
-
-% change to colored underline
-% \setkomafont{chapter}{\color{seeblau}\Huge\bfseries}
-% \setkomafont{section}{\color{seeblau}\Large\bfseries}
-% \setkomafont{chapter}{\Huge\bfseries\adjustbox{padding=3pt, bgcolor=seeblau, margin=-1pt}}
 
 % caption
 \usepackage{caption}
@@ -93,7 +88,7 @@
 	% backref=true,
 	hyperref=true,
 	url=true,
-	% maxbibnames=100
+	maxbibnames=100
 ]{biblatex}
 \addbibresource{../literature.bib}
 \DefineBibliographyStrings{english}{%
@@ -101,12 +96,17 @@
     backrefpages = {see pp.} % for multiple page numbers
 }
 
+% remove issue
+\AtEveryBibitem{%
+  \clearfield{number}
+}
+
 \usepackage{float}
-\floatplacement{figure}{H}
-\floatplacement{table}{H}
+% \floatplacement{figure}{h}
+% \floatplacement{table}{H}
 
 % loosen float placement rules
-\renewcommand{\topfraction}{0.3}
+\renewcommand{\topfraction}{0.8}
 \renewcommand{\bottomfraction}{.8}
 % \renewcommand{\textfraction}{0.1}
 \renewcommand{\floatpagefraction}{.9}
@@ -116,11 +116,11 @@
 % \setcounter{bottomnumber}{9}
 
 % decrease space between floats and text
-\setlength{\textfloatsep}{0.5cm}
-\setlength{\floatsep}{0.5cm}
-% decrease space between figure and caption
-\setlength{\abovecaptionskip}{0.2cm}
-\setlength{\belowcaptionskip}{0.2cm}
+% \setlength{\textfloatsep}{0.5cm}
+% \setlength{\floatsep}{0.5cm}
+% % decrease space between figure and caption
+% \setlength{\abovecaptionskip}{0.2cm}
+% \setlength{\belowcaptionskip}{0.2cm}
 
 
 \usepackage{adjustbox}
