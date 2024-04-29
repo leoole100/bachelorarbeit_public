@@ -39,7 +39,7 @@
 	\end{minipage}
 	\begin{minipage}{.49\textwidth}
 		\raggedleft
-		\includegraphics[height=20mm]{../figures/logo/UniKonstanz_Logo.pdf}
+		% \includegraphics[height=20mm]{../figures/logo/UniKonstanz_Logo.pdf}
 	\end{minipage}
 
 	\raggedright
@@ -61,15 +61,15 @@
 	{
 		\Large
 		Bachelor Thesis of Leon Oleschko\\
-		\normalsize\vspace{.25cm}
+		% \normalsize\vspace{.25cm}
 		Submitted to the Faculty of Physics, Universität Konstanz\\
 		\monthyeardate\today\\
 	}
 
 	% \vspace{.5cm}
- 	% {
-	% 	\includegraphics[height=20mm]{../figures/logo/UniKonstanz_Logo.pdf}
-	% }
+	% \centering
+	% \includegraphics[height=20mm]{../figures/logo/UniKonstanz_Logo.pdf}
+
 	\vfill
 	\normalsize
 	\raggedleft
@@ -85,7 +85,7 @@ Two-dimensional materials are of great interest due to their unique properties a
 The selected van der Waals antiferromagnets NiPS$_3$, CrPS$_4$, MnPS$_3$ and FePS$_3$ are ideal candidates for the study of magnetic phase transitions with varying inter-layer coupling and exotic magnetic orders.
 The materials can be easily exfoliated down to two-dimensional monolayers.\\
 With bandgaps in the optical and near-infrared regions optical measurement techniques offer promising opportunities for fast in situ measurements of the magnetic structure on a limited probe volume.
-Polarized photoluminescence has been identified as the most promising optical measurement techniques for studying the magnetic phase transition in the selected materials.\\
+Polarized photoluminescence has been identified as the most promising optical measurement technique for studying the magnetic phase transition in the selected materials.\\
 The magnetic splitting of the photoluminescence line of NiPS$_3$ has been demonstrated to be more interesting than previously thought, with different splitting observed for different linear polarization directions.\\
 In CrPS$_4$ the circular dichroism of the photoluminescence line is shown to be proportional to the magnetization, which allows the entire magnetic phase diagram to be studied with optical methods.
 
@@ -105,7 +105,7 @@ In CrPS$_4$ wird gezeigt, dass der zirkuläre Dichroismus von der Photoluminesze
 This thesis is part of the Bachelor's program in physics at the Universität Konstanz.
 
 I'm grateful for the welcoming atmosphere and the opportunity to delve into university research provided by Prof. Dr. Sebastian Gönnenwein's group at the Universität Konstanz. 
-This provided me with the opportunity to work on this project with guidance from Dr. Mateusz Goryca at the University of Warsaw.
+This provided me with the opportunity to work on this project with guidance from Dr. Mateusz Goryca for three and half months at the University of Warsaw.
 I would like to thank Prof. Dr. Sebastian Gönnenwein and Dr. Mateusz Goryca for making this experience possible.
 
 Especially I appreciate Dr. Mateusz Goryca for always quickly helping me with advice and assistance despite his busy schedule.
@@ -764,7 +764,7 @@ The measured circular dichroism signal correlates perfectly with magneto torque 
 However, the corresponding authors have thus far not provided their data for quantitative comparison.
 But at least from qualitative comparison, the circular dichroism of the photoluminescence line is proportional to the magnetization in CrPS$_4$.\\
 Additional theoretical work is necessary to explain this effect.
-In \cite{CrPS4_pl} the main photoluminescence peak is attributed to a simple transition between doublet states in the Cr$^{3+}$-ions, which does not explain the linear polarization.\\
+The main photoluminescence peak is attributed to a simple transition between doublet states in the Cr$^{3+}$-ions in \cite{CrPS4_pl}.\todo{}\\
 Nevertheless, this phenomenon can already be used to measure the magnetization.
 The phase transitions are visible as distinct changes in the magnetization curve in \autoref{fig:CrPS4 CD}.
 The spin-flop transition at \SI{.8}{T} and the spin-flip phase transition at \SI{7.5}{T} can be observed, matching the magneto torque measurements \cite{CrPS4_magnetic}.\\
@@ -851,28 +851,29 @@ Additionally, thinner flakes on the Si/SIO$_2$ substrate had cracks in the surfa
 The observed cracks appear to be mechanical stress fractures.
 The origin of these cracks, whether due to unequal thermal expansion or from the mechanical exfoliation process, remains unclear. 
 
-The source of the alignment remains unknown and requires further investigation because it is an unknown influence on measurements. 
+The source of the alignment remains unknown. 
+Further research is needed because it is an unknown influence on possibly similar measurements.
 
 \chapter{Conclusion and Outlook}
-Three and half months of measurements yielded a couple of interesting results:
-
-The NiPS$_3$ polarized photoluminescence measurements serve as an additional data point for validating models of the luminescence process.
-The luminescence is linearly polarized, exhibiting a distinct splitting for different polarization directions.\\
-The objective now is to compare different models for the luminescence process \cite{NiPS3_coherent, MPX_first_principles} with the measurements. 
-
-The CrPS$_4$ circular dichroism measurements represent a novel technique for probing the magnetization in this material.
-This result will be directly utilized for further research into the magnetic properties of CrPS$_4$ due to its capacity for easy and sensitive measurements on a limited sample volume.\\
-As of the time of writing, additional data is being recorded by the group in Warsaw to enhance the reliability of the results.
-
-It is dissatisfying that the reason for the alignment of the CrPS$_4$ flakes was not found.\\
-But the next steps are clear:\\
-Taking atomic force microscopy images after exfoliation, to see if flakes are already torn,\\
-changing the temperature at the transfer step during exfoliation to see a possible correlation with the rough surface to prove that the rough surface is glue residue,\\
-Washing away the glue to prove that it has a stabilizing effect on the flakes,\\
-and trying substrates with different thermal expansion coefficients to see if the alignment correlates. \\
-But all of these steps need a statistical argument, which takes many samples and time that I did not have.
-But maybe a future student can pick up where I left off.
-Because an unknown rotational symmetry-breaking mechanism in the process of exfoliation or the measurement is interesting, as many arguments assume that symmetry.
+In this work, polarized photoluminescence spectroscopy was identified as the most promising method for studying the magnetic properties of transition metal phosphorus sulfides, following an exploration of various methods.
+The findings reveal a higher complexity in the photoluminescence process of the studied materials than was previously understood.\\
+Specifically, the linearly polarized photoluminescence in NiPS$_3$ exhibits a distinct splitting for different polarization directions, challenging current models \cite{NiPS3_magnon_gap,NiPS3_linear,NiPS3_coherent}.
+Consequently, the objective now is to find a model for the photoluminescence process that can account for these measurements.\\
+The investigation into CrPS$_4$ uncovered a correlation between the circular dichroism of the photoluminescence signal and the magnetization.
+The observed proportionality offers a novel method for measuring the magnetization that is faster and more localized than previous methods.
+With this method phase transitions have been observed, indicating its potential for studying the entire magnetic phase diagram of CrPS$_4$.
+However, this challenges our current understanding of the photoluminescence process in this material, necessitating further research into the underlying mechanisms.
+As of the time of writing, additional data is being recorded by the group in Warsaw to enhance the reliability of the results.\\
+During these measurements, an unexpected alignment of the linear polarization of the photoluminescence signal was observed in CrPS$_4$ during cooling.
+Despite efforts, the cause of this alignment could not be identified in the scope of this work.
+Understanding the mechanism behind this alignment is crucial, as it may have implications for similar experiments.
+The next steps are obvious:
+Capturing atomic force microscopy images post-exfoliation to determine whether flakes are already torn.
+Modifying the temperature during the transfer step in exfoliation to investigate potential correlations with the rough surface, thereby confirming the presence of glue residue.
+Washing away the glue to confirm its stabilizing effect on the flakes.
+Experimenting with substrates with diverse thermal expansion coefficients to assess potential influence on the alignment.
+However, all these procedures necessitate a statistical argument, demanding numerous samples. 
+Nonetheless, it presents an opportunity for a future student to continue.
 
 
 
