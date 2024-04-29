@@ -1,6 +1,6 @@
 \documentclass[
-	oneside,
-	% twoside,
+	% oneside,
+	twoside,
 	parskip=half,
 	% 10pt,
 	a4paper,
@@ -100,7 +100,7 @@ Die magnetische Aufspaltung der Photolumineszenzlinie von NiPS$_3$ hat sich als 
 In CrPS$_4$ wird gezeigt, dass der zirkuläre Dichroismus von der Photolumineszenzline proportional zur Magnetisierung ist, was es ermöglicht, das gesamte magnetische Phasendiagramm mit optischen Methoden zu untersuchen.
 \vfill
 
-\cleardoublepage
+\clearpage
 \section*{Acknowledgements}
 This thesis is part of the Bachelor's program in physics at the Universität Konstanz.
 
@@ -122,61 +122,90 @@ His mentorship and encouragement, along with the freedom to explore independentl
 \mainmatter
 
 \chapter{Introduction}
-\begin{wrapfigure}[17]{O}{.4\textwidth}
+\begin{wrapfigure}[18]{O}{.4\textwidth}
 	\includegraphics[width=.4\textwidth]{../../figures/crystal structures/NiPS3 3d.png}\\
 	\caption{}
 	Crystal structure of NiPS$_3$ as an example for the studied materials.
 	The image is adapted from \cite{NiPS3_coherent}.
 	\label{fig:crystal structure}
 \end{wrapfigure}
-Two-dimensional materials feature unique properties, which makes them attractive for applications in nanocatalysis, optoelectronics, and spintronics \cite{MPX_review}.
-The class of \textit{transition metal phosphorus sulfides} offers a combination of properties that make them an ideal subject for the study of two-dimensional materials.
-These materials exhibit a wide range of exotic magnetic orders \cite{AFM_review}.
 
-MPS$_x$ "lowest electronic transition is mostly of d-d character and is localized at the transition-metal atoms." \cite{CrPS4_pl}.
+% background information and motivation
+% First I want a paragraph with background information and motivation, where I introduce van der Wals antiferromagnets, give a bit of background into the structure and, just mention interesting optical and magnetic properties.
+Antiferromagnetic van der Waals materials such as transition metal phosphorus sulfides are of great interest due to their unique combination of magnetic, optical, and structural properties \cite{MPX_review,MPS_magnetism}. 
+The structure of a specific material, NiPS$_3$, is illustrated in \autoref{fig:crystal structure} \cite{NiPS3_coherent}, demonstrating strong layers in the $a$-$b$ plane, bonded by weak van der Waals interactions along the $c$ axis.
+This allows for easy exfoliation of the flakes and enables the investigation of property changes resulting from the transition from three-dimensional to two-dimensional structures \cite{MPX_review}.
+The magnetic properties of these materials are dominated by the spins of the transition metal ions in the lattice \cite{MPS_magnetism}.
+They exhibit a wide range of thickness-dependent exotic magnetic orders \cite{AFM_review}, influenced by the varying anisotropy for different materials \cite{MPS_magnetism, CrPS4_magnetic}.\\
+% Then a Research gap paragraph where I explain, that it is difficult to determine the structure, especially fast and in situ.
+However, determining these orders is challenging due to the antiferromagnetic structure, which results in a net magnetization of zero \cite{MPS_magnetism}.
+Especially fast measurements in the monolayer limit without disturbing the sample is challenging \cite{AFM_review, CrPS4_magnetic}, but is important for studying phase changes and exploring applications in spintronics \cite{AFM_review}.
+Optical measurements emerge as the most promising methods, as they can be used for in situ measurements on a small sample volume and even offer spatial resolution. 
+However, the commonly used Kerr effect faces limitations, as detecting small polarization rotations in thin layers, in the order of \SI{5}{\mu rad}, is challenging \cite{AFM_review}.\\
+%Clearly state the goal of your research, which is to develop a technique for detecting magnetic structures or phase changes, even down to monolayer limits.
+The goal of this project is to identify optical signatures of magnetic order or magnetic phase transitions in the selected transition metal phosphorus sulfides, with the aim of developing a method suitable for fast in situ measurements and potentially extending to monolayers in the future.
+% Then limit the expectation that the interpretation of the entire magnetic dependent light-matter interaction process is out of scope for this work.
+This project focuses on identifying and demonstrating a suitable measurement technique, rather than on studying the magneto-dependent light-matter interaction process.\\
+% Then outline the thesis by explaining that in the methodology section, different methods were tried until polarized photoluminescence spectroscopy was found to be the most promising. And that in the result section two materials were studied with this method. That NiPS3 showed behavior that could not be explained by current theoretical models and in CrPS4 phase transitions were successfully observed using this method. 
+Various optical measurement techniques were evaluated in the methodology section, with polarized photoluminescence spectroscopy identified as the most promising method.
+Subsequently, this method was applied to NiPS$_3$ and CrPS$_4$ in the results section.
+While the phase transition in NiPS$_3$ was out of the experimental capabilities, the circular dichroism of the photoluminescence of CrPS$_4$ was successfully used to observe phase transitions.
 
-The crystal structure of one of the studied materials, NiPS$_3$, is illustrated in \autoref{fig:crystal structure} taken from \cite{NiPS3_coherent}.
-This structure is referred to as a \textit{van der Waals} layered material, as the material is highly anisotropic with quasi-2D layers held together by weak van der Waals forces.
-The layers are easy to mechanically exfoliate, which allows the manufacture of samples with a thickness down to monolayers \cite{NiPS3_few_layer}.\\
-The materials NiPS$_3$, CrPS$_4$, MnPS$_3$, and FePS$_3$ were chosen,  
-as these materials exhibit a wide range of different magnetic behaviors because the anisotropy of the magnetic interaction is different in each material \cite{MPS_magnetism,CrPS4_magnetic}.
-The magnetic properties are dominated by the spins of the metal ions in the lattice \cite{MPS_magnetism, NiPS3_magnon_gap, CrPS4_magnetic}.\\
-In NiPS$_3$ the interlayer coupling is weak and the spins of the Ni$^{2+}$ ions are in the layer planes \cite{MPS_magnetism}.
-In contrast, CrPS$_4$ exhibits strong interlayer coupling and has a magnetic structure that is perpendicular to the layers \cite{CrPS4_magnetic}.
-The combination of this property together with easy exfoliation is promising, as it allows to alter the magnetic properties of the material.
 
-The magnetic structure of all studied materials at low external magnetic field and below the Néel temperature of \SI{155}{K} for NiPS$_3$ and \SI{38}{K} for CrPS$_4$ \cite{MPS_magnetism, CrPS4_magnetic}  is anti-ferromagnetic.\\
-In the anti-ferromagnetic phase, two sublattices align in opposite directions, resulting in a magnetization of $M=0$.\\
-Over the Néel temperature, the magnetic order is paramagnetic with the spins randomly oriented and $M=0$.\\
-When a sufficiently strong external magnetic field $H>H_\text{SF}$ is applied a \textit{magnetic phase transition} occurs, known as a spin-flop transition.
-In this transition, all spins align with the magnetic field, resulting in a phase change from antiferromagnetic to ferromagnetic with $\vec{H}\propto \vec{M}>0$.\\
-This happens for CrPS$_4$ at \SI{7.5}{T} \cite{CrPS4_magnetic} and for NiPS$_3$ at \SI{14}{T} \cite{NiPS3_magnon_gap}.
-Unfortunately, the experimental capabilities were limited to \SI{10}{T}.
+\subsection*{Magnetic Properties}
 
-The selected materials offer useful optical properties, as they are semiconductors with a bandgap $E_B$ in the visible to near-infrared range.
-Consequently, they are suitable for optical measurements.\\
-Which have the advantage, that they can be used for fast, in situ measurements on a small sample volume or even with spatial resolution.\\
-This allows the study of changes in the fast anti-ferromagnets through pump-probe or noise measurements \cite{AFM_review}.
+\subsection*{Optic Properties}
 
-The temporal resolution is constrained by the speed of the material-light interaction.\\
-For an excitation photon to be absorbed by a semiconductor the photon energy $E_\text{ex} =h\nu= \nicefrac{hc}{\lambda}$ must exceed that of the bandgap $E_B$.
-This results in the excitation of an electron $e^-$ from the valence band to the conduction band, accompanied by the creation of a hole $h^+$ in the valence band.\\
-The electron and the hole can combine to form a neutral exciton $x$, a bound state of the electron and the hole, with a binding energy $E_x$.\\
-Additionally, more complex structures such as charged excitons or biexcitons, can form with different binding energies.
-All these structures can also be in excited states.\\
-The energy difference $E_\text{ex}-E_B+E_x$ is dissipated through processes such as phonon emission, which heats the sample, intra-band photon emission, or a combination of these mechanisms.\\
-The remaining energy is emitted as a luminescence photon with energy $E_B - E_x$, which can be observed as one strong peak in the spectrum for excitons and multiple smaller ones for the more complex structures.
-\cite{MPX_first_principles,NiPS3_anisotropic,NiPS3_coherent,NiPS3_exciton}
+% \clearpage
 
-When a local magnetic field $B=H+M$ is present, the luminescence line splits into two lines with different energies.
-This phenomenon can be explained by the Zeeman effect or spin-orbit coupling of the exciton \cite{NiPS3_exciton}.\\
-In addition, the bandgap also changes in response to the magnetic field \cite{MPS_magnetism}. 
-This change can vary depending on the spin directions.
-Therefore, changes for different circular polarizations can be expected \cite{MPX_first_principles}.\\
-Various models have been proposed to explain the linear polarisation of the luminescence \cite{NiPS3_coherent, NiPS3_linear, NiPS3_exciton, NiPS3_anisotropic}.
+% Two-dimensional materials feature unique properties, which makes them attractive for applications in nanocatalysis, optoelectronics, and spintronics \cite{MPX_review}.
+% The class of \textit{transition metal phosphorus sulfides} offers a combination of properties that make them an ideal subject for the study of two-dimensional materials.
+% These materials exhibit a wide range of exotic magnetic orders \cite{AFM_review}.
 
-The objective of this project is to identify optical signatures of the magnetic phase transition in the selected materials using a measurement technique that can be used for fast in situ measurements and on monolayers in the future.\\
-This will enable further studies of the magnetic properties with temporal resolution through pump-probe or noise measurements, which is particularly relevant for spintronics applications \cite{AFM_review}.
+% MPS$_x$ "lowest electronic transition is mostly of d-d character and is localized at the transition-metal atoms." \cite{CrPS4_pl}.
+
+% The crystal structure of one of the studied materials, NiPS$_3$, is illustrated in \autoref{fig:crystal structure} taken from \cite{NiPS3_coherent}.
+% This structure is referred to as a \textit{van der Waals} layered material, as the material is highly anisotropic with quasi-2D layers held together by weak van der Waals forces.
+% The layers are easy to mechanically exfoliate, which allows the manufacture of samples with a thickness down to monolayers \cite{NiPS3_few_layer}.\\
+% The materials NiPS$_3$, CrPS$_4$, MnPS$_3$, and FePS$_3$ were chosen,  
+% as these materials exhibit a wide range of different magnetic behaviors because the anisotropy of the magnetic interaction is different in each material \cite{MPS_magnetism,CrPS4_magnetic}.
+% The magnetic properties are dominated by the spins of the metal ions in the lattice \cite{MPS_magnetism, NiPS3_magnon_gap, CrPS4_magnetic}.\\
+% In NiPS$_3$ the interlayer coupling is weak and the spins of the Ni$^{2+}$ ions are in the layer planes \cite{MPS_magnetism}.
+% In contrast, CrPS$_4$ exhibits strong interlayer coupling and has a magnetic structure that is perpendicular to the layers \cite{CrPS4_magnetic}.
+% The combination of this property together with easy exfoliation is promising, as it allows to alter the magnetic properties of the material.
+
+% The magnetic structure of all studied materials at low external magnetic field and below the Néel temperature of \SI{155}{K} for NiPS$_3$ and \SI{38}{K} for CrPS$_4$ \cite{MPS_magnetism, CrPS4_magnetic}  is anti-ferromagnetic.\\
+% In the anti-ferromagnetic phase, two sublattices align in opposite directions, resulting in a magnetization of $M=0$.\\
+% Over the Néel temperature, the magnetic order is paramagnetic with the spins randomly oriented and $M=0$.\\
+% When a sufficiently strong external magnetic field $H>H_\text{SF}$ is applied a \textit{magnetic phase transition} occurs, known as a spin-flop transition.
+% In this transition, all spins align with the magnetic field, resulting in a phase change from antiferromagnetic to ferromagnetic with $\vec{H}\propto \vec{M}>0$.\\
+% This happens for CrPS$_4$ at \SI{7.5}{T} \cite{CrPS4_magnetic} and for NiPS$_3$ at \SI{14}{T} \cite{NiPS3_magnon_gap}.
+% Unfortunately, the experimental capabilities were limited to \SI{10}{T}.
+
+% The selected materials offer useful optical properties, as they are semiconductors with a bandgap $E_B$ in the visible to near-infrared range.
+% Consequently, they are suitable for optical measurements.\\
+% Which have the advantage, that they can be used for fast, in situ measurements on a small sample volume or even with spatial resolution.\\
+% This allows the study of changes in the fast anti-ferromagnets through pump-probe or noise measurements \cite{AFM_review}.
+
+% The temporal resolution is constrained by the speed of the material-light interaction.\\
+% For an excitation photon to be absorbed by a semiconductor the photon energy $E_\text{ex} =h\nu= \nicefrac{hc}{\lambda}$ must exceed that of the bandgap $E_B$.
+% This results in the excitation of an electron $e^-$ from the valence band to the conduction band, accompanied by the creation of a hole $h^+$ in the valence band.\\
+% The electron and the hole can combine to form a neutral exciton $x$, a bound state of the electron and the hole, with a binding energy $E_x$.\\
+% Additionally, more complex structures such as charged excitons or biexcitons, can form with different binding energies.
+% All these structures can also be in excited states.\\
+% The energy difference $E_\text{ex}-E_B+E_x$ is dissipated through processes such as phonon emission, which heats the sample, intra-band photon emission, or a combination of these mechanisms.\\
+% The remaining energy is emitted as a luminescence photon with energy $E_B - E_x$, which can be observed as one strong peak in the spectrum for excitons and multiple smaller ones for the more complex structures.
+% \cite{MPX_first_principles,NiPS3_anisotropic,NiPS3_coherent,NiPS3_exciton}
+
+% When a local magnetic field $B=H+M$ is present, the luminescence line splits into two lines with different energies.
+% This phenomenon can be explained by the Zeeman effect or spin-orbit coupling of the exciton \cite{NiPS3_exciton}.\\
+% In addition, the bandgap also changes in response to the magnetic field \cite{MPS_magnetism}. 
+% This change can vary depending on the spin directions.
+% Therefore, changes for different circular polarizations can be expected \cite{MPX_first_principles}.\\
+% Various models have been proposed to explain the linear polarisation of the luminescence \cite{NiPS3_coherent, NiPS3_linear, NiPS3_exciton, NiPS3_anisotropic}.
+
+% The objective of this project is to identify optical signatures of the magnetic phase transition in the selected materials using a measurement technique that can be used for fast in situ measurements and on monolayers in the future.\\
+% This will enable further studies of the magnetic properties with temporal resolution through pump-probe or noise measurements, which is particularly relevant for spintronics applications \cite{AFM_review}.
 
 
 
@@ -284,23 +313,20 @@ The resulting flakes have a thickness of approximately $\SI{500}{nm}$ and can be
 In order to identify the optical signatures of phase transitions, an optical measurement technique is used.
 A few different methods were tried.
 
-\begin{wrapfigure}[18]{O}{.4\textwidth}
-	\includegraphics[width=.4\textwidth]{../figures/carray schematic.png}\\
-	\caption\\
-	Schematic of the transmission spectrometer from \cite{cary}.
-	\label{fig:carry}
-\end{wrapfigure}
+% \begin{wrapfigure}[18]{O}{.4\textwidth}
+% 	\includegraphics[width=.4\textwidth]{../figures/carray schematic.png}\\
+% 	\caption\\
+% 	Schematic of the transmission spectrometer from \cite{cary}.
+% 	\label{fig:carry}
+% \end{wrapfigure}
 \subsection{Transmission}
 To measure a signal independently of the surface quality transmission spectroscopy can be used.
 Specifically a commercial transmission spectrometer, the \textit{Cary 5000}, was utilized.
-The schematic for it is shown in \autoref{fig:carry}.\\
+% The schematic for it is shown in \autoref{fig:carry}.\\
 \textit{Jan Suffczyński} was a great help in getting me up to speed with the machine and the cooling loop of the closed-cycle cryostat.
-
-The functional principle is not explained in any of the provided documentation which would be interesting, because the spectrometer has surprisingly little noise.
-
+\todo{Short description of spectrometer}
 The spectrometer has two user-accessible beam paths, one is the reference and one the sample.
 A relative transmissivity is reported from the instrument, defined as $T = \nicefrac{T_\text{Sample}}{T_\text{Reference}}$.
-
 \begin{figure}[b]
 	\centering
 	\includegraphics{../figures/2024-03-15 MnPS3 transmission raw.pdf}
@@ -922,6 +948,6 @@ durch Dritte (z.B. Suchmaschinenanbieter oder Datenbankbetreiber) weiterverwende
 
 Als Urheber der anliegenden Arbeit stimme ich dem obigen Veröffentlichungsverfahren zu.
 
-Konstanz, den 
+Konstanz, den 2. Mai 2024
 
 \end{document}
