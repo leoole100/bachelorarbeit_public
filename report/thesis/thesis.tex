@@ -149,94 +149,38 @@ While the phase transition in NiPS$_3$ was out of the experimental capabilities,
 The results also demonstrate the limits of our current theoretical understanding of the photoluminescence process in these materials. 
 
 % paragraph that first some background about the used materials is given
-\section{Properties of the selected materials}
-\todo[inline]{}
-% An introduction to the materials utilized in this project is given with a brief explanation of their magnetic and optical properties.
-The selected materials belong to the class of transition metal phosphorus sulfides or transition metal thiophosphates \cite{MPS_magnetism}, which are a subset of the broader category of transition metal chalcogenides (TMD).
-TMDs share a similar crystal structure but differ in the chalcogenides they contain. 
-They also exhibit different magnetic orders than antiferromagnetic \cite{AFM_review}.
-The materials chosen for this project are NiPS$_3$, CrPS$_4$, MnPS$_3$, and FePS$_3$.
+\section{Properties of transition metal phosphorus sulfides}
+The utilized transition metal phosphorus sulfides or transition metal thiophosphates for this project are NiPS$_3$, CrPS$_4$, MnPS$_3$, and FePS$_3$.
 They were selected for their wide range of magnetic anisotropies \cite{MPS_magnetism,CrPS4_magnetic}.
 
 % \subsection{Magnetic Properties}
 % define antiferromagnetic order
 The magnetic properties of transition metal phosphorus sulfides are dominated by the spins of the transition metal ions in the lattice \cite{MPS_magnetism}.
 In the absence of an external magnetic field $B$ and below the Néel temperature $T_N$, the magnetic order of the spins is antiferromagnetic.
-In this phase, the spins of the ions align in two or more sublattices, resulting in a net magnetization of zero \cite[p.195]{afm}. 
+In this phase, the spins of the ions align in two or more sublattices, resulting in a net magnetization of zero \cite[p.195]{afm}. \\
+% explain the phase transition
 This order can be altered by applying a sufficiently strong external magnetic field $H$ to induce a magnetic phase transition, in which the spins align with the field \cite{CrPS4_magnetic}.
-Alternatively, the magnetic order can be altered by changing the temperature, as the Néel temperature is the temperature at which the magnetic order changes from antiferromagnetic to paramagnetic \cite{MPS_magnetism, CrPS4_magnetic}.
+Alternatively, the phase can be changed with increasing the temperature, as the Néel temperature is the temperature at which the magnetic order changes from antiferromagnetic to paramagnetic \cite{MPS_magnetism, CrPS4_magnetic}.
 
 % \subsection{Optic Properties}
 % define bandgap, mention that it splits in magnetic field \cite{MPX_first_principles}
 All studied materials are semiconductors with a bandgap $E_B$ in the visible to near-infrared range.
 The bandgap is the energy difference between the valence and conduction bands, which determines the energy required to excite an electron from the valence to the conduction band.
-For a photon to be absorbed by the semiconductor, the photon energy $E_\text{ex} = h\nu = \nicefrac{hc}{\lambda}$ must exceed the bandgap $E_B$.
-A change in the order of \SI{1}{meV} of the band edges in response to the alignment of the spins of the metal ions is expected according to theoretical calculations \cite{MPX_first_principles}.
-Therefore, the bandgap is expected to change in response to the magnetic order.
-% explain photoluminescence as a direct 
-
+For a photon to be absorbed by the semiconductor, the photon energy $E_\text{ex}$ must exceed the bandgap $E_B$.
+% explain photoluminescence
+The free electron in the conduction band can then recombine with a hole in the valence band, emitting a photoluminescence photon with energy $E_B$.
+The excess energy $E_\text{ex} - E_B$ is dissipated through processes such as phonon emission, which heats the sample, or intra-band photon emission.\\
 % with exciton 
+Furthermore, more complex photoluminescence processes can occur, such as the formation of neutral excitons $X$, which are bound states of the electron and hole with a binding Energy $E_X$.
+When the exciton recombines a photoluminescence photon with energy $E_B - E_X$ is emitted below the bandgap.
+The photoluminescence process in the studied materials is reported to be dominated by the exciton recombination \cite{NiPS3_exciton,MPX_first_principles,NiPS3_anisotropic}.
+Although more complex processes are proposed \cite{NiPS3_coherent}.
+% explain the splitting
+The band edges change in response to the alignment of the spins of the metal ions, and therefore depend on the magnetic phase \cite{MPX_first_principles}.
+This change is in the order of \SI{1}{meV} according to theoretical calculations \cite{MPX_first_principles}.
+The various photoluminescence processes can also influenced by the magnetic order \cite{NiPS3_linear}.
 
-
-
-
-% Wannier–Mott exciton
-% explain possible splitting and polarization with Zeeman effect of exciton 
-% mention that there are other models for the photoluminescence process
-
-
-
-% \clearpage
-
-% Two-dimensional materials feature unique properties, which makes them attractive for applications in nanocatalysis, optoelectronics, and spintronics \cite{MPX_review}.
-% The class of \textit{transition metal phosphorus sulfides} offers a combination of properties that make them an ideal subject for the study of two-dimensional materials.
-% These materials exhibit a wide range of exotic magnetic orders \cite{AFM_review}.
-
-% MPS$_x$ "lowest electronic transition is mostly of d-d character and is localized at the transition-metal atoms." \cite{CrPS4_pl}.
-
-% The crystal structure of one of the studied materials, NiPS$_3$, is illustrated in \autoref{fig:crystal structure} taken from \cite{NiPS3_coherent}.
-% This structure is referred to as a \textit{van der Waals} layered material, as the material is highly anisotropic with quasi-2D layers held together by weak van der Waals forces.
-% The layers are easy to mechanically exfoliate, which allows the manufacture of samples with a thickness down to monolayers \cite{NiPS3_few_layer}.\\
-% The materials NiPS$_3$, CrPS$_4$, MnPS$_3$, and FePS$_3$ were chosen,  
-% as these materials exhibit a wide range of different magnetic behaviors because the anisotropy of the magnetic interaction is different in each material \cite{MPS_magnetism,CrPS4_magnetic}.
-% The magnetic properties are dominated by the spins of the metal ions in the lattice \cite{MPS_magnetism, NiPS3_magnon_gap, CrPS4_magnetic}.\\
-% In NiPS$_3$ the interlayer coupling is weak and the spins of the Ni$^{2+}$ ions are in the layer planes \cite{MPS_magnetism}.
-% In contrast, CrPS$_4$ exhibits strong interlayer coupling and has a magnetic structure that is perpendicular to the layers \cite{CrPS4_magnetic}.
-% The combination of this property together with easy exfoliation is promising, as it allows to alter the magnetic properties of the material.
-
-% The magnetic structure of all studied materials at low external magnetic field and below the Néel temperature of \SI{155}{K} for NiPS$_3$ and \SI{38}{K} for CrPS$_4$ \cite{MPS_magnetism, CrPS4_magnetic}  is anti-ferromagnetic.\\
-% In the anti-ferromagnetic phase, two sublattices align in opposite directions, resulting in a magnetization of $M=0$.\\
-% Over the Néel temperature, the magnetic order is paramagnetic with the spins randomly oriented and $M=0$.\\
-% When a sufficiently strong external magnetic field $H>H_\text{SF}$ is applied a \textit{magnetic phase transition} occurs, known as a spin-flop transition.
-% In this transition, all spins align with the magnetic field, resulting in a phase change from antiferromagnetic to ferromagnetic with $\vec{H}\propto \vec{M}>0$.\\
-% This happens for CrPS$_4$ at \SI{7.5}{T} \cite{CrPS4_magnetic} and for NiPS$_3$ at \SI{14}{T} \cite{NiPS3_magnon_gap}.
-% Unfortunately, the experimental capabilities were limited to \SI{10}{T}.
-
-% The selected materials offer useful optical properties, as they are semiconductors with a bandgap $E_B$ in the visible to near-infrared range.
-% Consequently, they are suitable for optical measurements.\\
-% Which have the advantage, that they can be used for fast, in situ measurements on a small sample volume or even with spatial resolution.\\
-% This allows the study of changes in the fast anti-ferromagnets through pump-probe or noise measurements \cite{AFM_review}.
-
-% The temporal resolution is constrained by the speed of the material-light interaction.\\
-% For an excitation photon to be absorbed by a semiconductor the photon energy $E_\text{ex} =h\nu= \nicefrac{hc}{\lambda}$ must exceed that of the bandgap $E_B$.
-% This results in the excitation of an electron $e^-$ from the valence band to the conduction band, accompanied by the creation of a hole $h^+$ in the valence band.\\
-% The electron and the hole can combine to form a neutral exciton $x$, a bound state of the electron and the hole, with a binding energy $E_x$.\\
-% Additionally, more complex structures such as charged excitons or biexcitons, can form with different binding energies.
-% All these structures can also be in excited states.\\
-% The energy difference $E_\text{ex}-E_B+E_x$ is dissipated through processes such as phonon emission, which heats the sample, intra-band photon emission, or a combination of these mechanisms.\\
-% The remaining energy is emitted as a luminescence photon with energy $E_B - E_x$, which can be observed as one strong peak in the spectrum for excitons and multiple smaller ones for the more complex structures.
-% \cite{MPX_first_principles,NiPS3_anisotropic,NiPS3_coherent,NiPS3_exciton}
-
-% When a local magnetic field $B=H+M$ is present, the luminescence line splits into two lines with different energies.
-% This phenomenon can be explained by the Zeeman effect or spin-orbit coupling of the exciton \cite{NiPS3_exciton}.\\
-% In addition, the bandgap also changes in response to the magnetic field \cite{MPS_magnetism}. 
-% This change can vary depending on the spin directions.
-% Therefore, changes for different circular polarizations can be expected \cite{MPX_first_principles}.\\
-% Various models have been proposed to explain the linear polarisation of the luminescence \cite{NiPS3_coherent, NiPS3_linear, NiPS3_exciton, NiPS3_anisotropic}.
-
-% The objective of this project is to identify optical signatures of the magnetic phase transition in the selected materials using a measurement technique that can be used for fast in situ measurements and on monolayers in the future.\\
-% This will enable further studies of the magnetic properties with temporal resolution through pump-probe or noise measurements, which is particularly relevant for spintronics applications \cite{AFM_review}.
-
+This work evaluates whether these changes in optical properties can be used to study the magnetic phase transitions in the selected materials.
 
 
 \chapter{Methodology}
@@ -352,13 +296,13 @@ As the expected change in the bandgap due to magnetic field is in the order of \
 To begin the exploration of optical spectroscopy techniques, transmission spectroscopy was selected due to its independence from surface quality.
 Specifically, a commercial double-beam spectrophotometer, the \textit{Cary 5000}, was employed.
 This spectrometer has two user-accessible beam paths, one for reference and the other for the sample.
-The spectrometer uses a single light source and two detectors to calculate the relative transmissivity as $T = \nicefrac{I_\text{Sample}}{I_\text{Reference}}$ between the two paths.\\
+It uses a single light source and two detectors to calculate the relative transmissivity as $T = \nicefrac{I_\text{Sample}}{I_\text{Reference}}$ between the two paths.\\
 For the initial measurements, MnPS$_3$ was selected because the \SI{.5}{mm} bulk crystals are already visually transparent.
 The relative transmissivity is shown in \autoref{fig:transmission raw} for a MnPS$_3$ crystal and a hole in the sample path. For both measurements the reference path was empty.\\
 Surprisingly the relative transmission of the hole is not constant.
 The only difference between the paths are the Quartz windows of the cryostat in which the sample was mounted and the aperture of the sample holder.
 The non-uniform transmission spectrum observed can be attributed to a wrong calibration of the spectrometer around the transition from infrared to visible mode, occurring at \SI{800}{nm} (corresponding to \SI{1.55}{eV}).\\
-Irrespective of the underlying cause, the measurement was reproducible and the signal can be corrected by dividing it with a calibration spectrum of the hole and aligning the visible and infrared spectra in software.
+Irrespective of the underlying cause, the measurement was reproducible and a measurement can be corrected by dividing it with a calibration spectrum of the hole and aligning the visible and infrared spectra in software.
 \begin{figure}
 	\centering
 	\includegraphics{../figures/2024-03-15 MnPS3 transmission processed.pdf }
@@ -390,9 +334,10 @@ It also has no way to individually display the intensity for the sample or refer
 In order to obtain any usable measurements, the samples were exfoliated to a specific optical transparency, as shown in \autoref{fig:transmission samples}.
 Additionally, a compensating aperture was placed in the reference beam.
 To hold the thick exfoliated flakes, they were not transferred to a substrate but mounted with the adhesive tape used for exfoliation. 
-This method was successfully used down to \SI{10}{K} without any issues.
-However, this workflow is rather tedious and there is no way to use a magnet with the spectrometer away.\\
+This method was successfully used down to \SI{10}{K} without any issues.\\
+However, this workflow is rather tedious and there is no way to use a magnet with the spectrometer away.
 There were plans to rebuild the transmission setup using a cryostat with a built-in super-conducting magnet within the presented project, but this was not realized due to time constraints and unexpected measurements discussed in Section \ref{sec:aligning flakes}.
+
 Nevertheless, this technique remains promising as it allows for the independent measurement of the bandgap, circumventing luminescent phenomena.
 
 \clearpage
@@ -404,7 +349,7 @@ Nevertheless, this technique remains promising as it allows for the independent 
 	\label{fig:reflection setup}
 \end{figure}
 Subsequently, reflection spectroscopy using the setup shown in \autoref{fig:reflection setup} was evaluated.
-In this instance, a halogen lamp was utilized to illuminate the sample.
+Here a halogen lamp was utilized to illuminate the sample.
 The light was focused by a lens (L$_5$) with a high numeric aperture on a small (in the order of \SI{10}{um}) spot.
 The reflected beam passed through a beam-splitter (BS$_2$) into a spectrometer.
 This technique only needs access to the sample from a single side, which simplifies the setup.
@@ -426,13 +371,14 @@ Deconvolving the spectral shape of the lamp by dividing the signal from the samp
 \end{figure}
 In order to remove the lamp spectrum, a filter function $f$, for example, the \textit{Empirical Mode Decomposition}, can be employed \cite{thickness}.
 The result of the filtered signal is presented in \autoref{fig:reflection filtered}.
+
 However, even with the filtering, the bandgap edge remains difficult to detect precisely, which makes the technique unsuitable for the detection of the expected small shifts in the bandgap.
 
 \subsubsection{Thickness Estimation}
 \label{sec:thickness}
 The thin film interference pattern can be utilized to estimate the thickness of the sample.
 In order for the total reflection to be strong, the top reflection and the bottom reflection have to be in phase.
-Specifically $\nicefrac{2nd}{\lambda}=j$ with the whole cycle offsets $j\in\mathbb{N}$, the refractive index $n$ and $2$ times the thickness $d$.
+Specifically $\nicefrac{2nd}{\lambda}=j$ with the count of whole cycle $j\in\mathbb{N}$, the refractive index $n$ and $2$ times the thickness $d$.
 Therefore the filtered reflected signal is similar to:
 \begin{align}
 	R(\lambda > \lambda_\text{Bandgap}) &\approx \cos \left( 2 \pi \cdot \frac{2 n d}{\lambda} \right)
@@ -442,13 +388,13 @@ which can be decomposed into the components for different thicknesses:
 	S(nd) &= \mathcal{F}\left[ f\left(R\left(\frac{1}{\lambda}\right)\right)\right]( 2 nd)
 \end{align}
 Where $f$ is the filter function used to remove the influence of the light source.
-And the Fourier Transform $\mathcal{F}$ is evaluated using the Lomb-Scargle method \cite{scargle} because the data is not evenly spaced. 
+The Fourier Transform $\mathcal{F}$ is evaluated using the Lomb-Scargle method \cite{scargle} because the data is not evenly spaced. 
 Even for evenly spaced data this method is useful as it is less sensitive to intensity noise than the discrete Fourier transform \cite{scargle}.\\
+The thickness signal for different samples is depicted in \autoref{fig:thickness bulk}.
 The NiPS$_3$ samples each have one effective thickness, in the order of \SI{400}{um}.
 In contrast, the MnPS$_3$ sample displays multiple peaks in the range of \SI{40}{um}.
-When observed with an optical microscope in \autoref{fig:thickness MnPS3}, the MnPS$_3$ sample has multiple layers of cracks at different depths, indicated by the varying focus.
+When observed with an optical microscope (see \autoref{fig:thickness MnPS3}), the MnPS$_3$ sample has multiple layers of cracks at different depths, indicated by the varying focus.
 This matches with the recorded thickness signal.
-The thickness signal for different samples is depicted in \autoref{fig:thickness bulk}.
 \begin{figure}
 	\begin{subfigure}[t]{3.5in}
 		\vskip 0pt
@@ -494,14 +440,14 @@ It is possible to normalize the spectrum from the flake to the reflection of the
 \begin{align}
 	R_\text{Normalized} &= \frac{R_\text{Flake} - Bkg}{R_\text{Substrate} - Bkg}
 \end{align}
-Where $Bkg$ is a signal measured without illumination. 
-The $Bkg$ signal consists of an electronic dark noise from the spectrometer and stray light present in the room.\\
+Where $Bkg$ is a signal measured without illumination, it consists of an electronic dark noise from the spectrometer and stray light present in the room.\\
 The results are displayed in \autoref{fig:reflection flakes}.
 It is not possible to extract the position of the bandgap edge in the signal.
 The hard-to-interpret shape is due to the thin film interference pattern of three interfaces.
-The first interface is the vacuum-flake, the next is the flake-SiO$_2$ of the substrate, and the last is the SiO$_2$-Si interface.\\
+The first interface is the vacuum-flake, the next is the flake-SiO$_2$ of the substrate, and the last is the SiO$_2$-Si interface in the substrate.\\
 This is also visible in the thickness signal in \autoref{fig:thickness flakes}.
-For CrPS$_4$ the thickness of the flake is found to be between \SIrange{200}{700}{nm}, as confirmed by subsequent measurements with atomic force microscopy in Section \ref{sec:aligning flakes} \autoref{fig:AFM torn}.
+For CrPS$_4$ the thickness of the flake is found to be between \SIrange{200}{700}{nm} by subsequent measurements with atomic force microscopy in Section \ref{sec:aligning flakes}, \autoref{fig:AFM torn}.
+With the refractive index of the flake $n\approx1.5$ \cite{CrPS4_refrative}, the recorded thickness signal is consistent with the atomic force microscopy measurements.
 Additionally, a second peak at $\SI{1180}{nm}\cdot n$ is observed, which may be attributed to the SiO$_2$ layer of the substrate. 
 However, the substrate was derived from the same wafer for all samples, and there is no reason for the thickness of the SiO$_2$ layer to vary between the different samples.
 
@@ -552,7 +498,7 @@ Despite exfoliation to remove the rough surface, no photoluminescence was detect
 	\label{fig:pl power dependence spectra}
 \end{figure}
 It is standard practice to use an excitation power in the range of \SI{5}{uW} to \SI{5}{mW} to prevent damage to the sample \cite{NiPS3_anisotropic, NiPS3_exciton}.
-However, the damage threshold is dependent on the power density, and neither the beam size nor the damage threshold is known.
+However, the damage threshold is dependent on the power density, and neither the beam size nor the damage threshold is reported.
 In order to get an understanding of the saturation of the sample the power scaling was measured.
 The resulting spectra for different excitation powers are shown in \autoref{fig:pl power dependence spectra}.
 No unexpected drastic changes that would indicate damage to the sample are visible.
@@ -570,7 +516,7 @@ Since a power law fit is commonly used to describe the scaling the fit is also s
 In order to achieve a good signal-to-noise ratio while avoiding saturating the sample, the excitation power was selected to be in the range of \SI{1}{} to \SI{4}{mW}.
 Even when illuminated with \SI{20}{mW}, the sample did not exhibit any signs of damage.\\
 However, following multiple measurements, the photoluminescence ceased in some NiPS$_3$ flakes.
-This is not due to the excitation, as this also occurred in flakes that were not excited.
+This is not due to the excitation, as it also occurred in flakes that were not excited.
 It is caused by oxidation during storage and manipulation of the samples.
 There were no visible changes to those samples on optical microscope images.
 
@@ -581,7 +527,7 @@ There were no visible changes to those samples on optical microscope images.
 	\caption{Detailed schematic of the entire measurement setup.}
 	\label{fig:schematic full}
 \end{figure}
-The optical table had a few additional components not depicted on the simplified schematic \autoref{fig:pl setup}.
+The optical table had a few additional components not depicted on the simplified schematics.
 The full schematic is presented in \autoref{fig:schematic full}.
 
 The sample $S$ could be illuminated with a fiber-coupled array of diode lasers to excite the photoluminescence or a fiber-coupled halogen lamp to enable imaging of the sample with a camera, and subsequently a stronger white LED for the same purpose.
@@ -595,7 +541,7 @@ To get more light for the camera, $M_1$ could be flipped out and $M_3$ could be 
 This obstructs the spectrometer and compromises the polarization of the light, but increases the intensity by a factor of two.
 $BS_3$ was just used to image the surface of the sample with the camera. 
 It was a film beam splitter with a large aperture that had to be removed for polarization-sensitive measurements, as it is strongly polarizing.\\
-The objective lens $L_5$ was mounted on an x-y-z piezo stage in the cryostat to move and focus on different flakes of the sample.\\
+The objective lens $L_5$ was mounted on an x-y-z piezo stage in the cryostat to move and focus on different flakes of the samples.\\
 The cryostat and the magnet are combined in a single unit since the \SI{10}{T} superconducting magnet needs a helium reservoir.
 The sample was in a variable temperature insert with a controllable helium cooling flow and an electric heater.\\
 The light from the sample then goes through the retarder $\lambda_2$ and the polarizer P$_2$ to control the analyzed polarization.
@@ -622,7 +568,7 @@ First, NiPS$_3$ was investigated with polarization-resolved photoluminescence sp
 This was done with exfoliated flakes on a Si/SiO$_2$ substrate for easier handling.
 
 When an external magnetic field $H$ is applied to the sample in the natural $a$-$b$ plane of the crystal, the main photoluminescence line observed from the plane normal splits into two lines.
-This is shown in \autoref{fig:NiPS3 splitting} for different detection polarizations $P$.\\
+This is shown in \autoref{fig:NiPS3 splitting} for different detection polarizations $P$.
 The amount of splitting $\Delta E$ is different for different polarization directions.
 In the polarization direction where the external magnetic field $H$ is aligned with the electric field of the photoluminescence signal $P\parallel H$, the splitting $\Delta E$ is larger than in the perpendicular direction $P\perp H$.
 
@@ -633,7 +579,7 @@ In the polarization direction where the external magnetic field $H$ is aligned w
 	\label{fig:NiPS3 delta E}
 \end{figure}
 To directly determine $\Delta E$, the sum of two Gaussian peaks was fitted, with the peaks centered at $E\pm \nicefrac{\Delta E}{2}$ with the same amplitudes $I$ and widths $\sigma$.
-Given that the linewidth is significantly narrower \cite{NiPS3_magnon_gap} than the resolution of the spectrometer, $\sigma$ was held constant over the field and polarization angle.
+Given that the linewidth of the photoluminescence is significantly narrower \cite{NiPS3_magnon_gap} than the resolution of the spectrometer, $\sigma$ was held constant.
 $E$ and $I$ were fitted independently for each measurement over field and polarization angle, as the turning retarder and the field-dependent moving sample holder altered the position of the focus on the spectrometer and the focus on the sample, thereby changing $E$ and $I$ respectively.
 The resulting splitting $\Delta E$ is shown over the field and polarisation angle in \autoref{fig:NiPS3 delta E}.
 
@@ -663,7 +609,7 @@ In most flakes, the splitting was not as clear as in \autoref{fig:NiPS3 splittin
 It was either a broadening of the line as shown in \autoref{fig:NiPS3 10K} or multiple overlapping splitting curves as shown in \autoref{fig:NiPS3 10K multiple flakes} for \SI{50}{K}.\\
 At higher temperatures, the photoluminescence peak was broader and the splitting was not visible, as shown in \autoref{fig:NiPS3 50K}.
 Above \SI{50}{K} the photoluminescence could not be measured over the field, and thus the phase transition to paramagnetic at the Néel temperature of \SI{155}{K} \cite{MPS_magnetism} can not be observed with this method.\\
-No hysteresis was observed over the magnetic field in any of the measurements.
+No hysteresis was observed over the magnetic field in any of the measurements and no change in circular polarization was detected.
 
 \clearpage
 
@@ -697,8 +643,8 @@ No hysteresis was observed over the magnetic field in any of the measurements.
 	\caption{Different models for the photoluminescence signal in NiPS$_3$.}
 \end{figure}
 To understand the observed splitting of the photoluminescence line, a model from \cite{NiPS3_magnon_gap} can be used, as the splitting was already observed there. 
-A mean-field biaxial antiferromagnet model was proposed, that defines the angle $\psi$ shown in \autoref{fig:NiPS3 linear model} between the spin of the $Ni^{2+}$-ions and the external magnetic field $\vec{H}$.
-For $H=0$ the spin aligns with the $a$-crystal axis, and thus, the initial angle $\theta_0=\psi\left(H=0\right)=\measuredangle(a, H)$ can be defined.
+A mean-field biaxial antiferromagnet model was proposed, that defines the angle $\psi$ shown in \autoref{fig:NiPS3 linear model} between the spin direction of the $Ni^{2+}$-ions and the external magnetic field $\vec{H}$.
+For $H=0$ the spins align with the $a$-crystal axis, and thus, the initial angle $\theta_0=\psi\left(H=0\right)=\measuredangle(a, H)$ can be defined.
 The coupling constants along the axis of the model result in an effective $g$ factor and a spin-flop field $H_\text{sf}$.
 Consequently, the proposed model \autocite{NiPS3_magnon_gap} yields the following expressions for the angle $\psi$ and the splitting $\Delta E$:
 \begin{align}
@@ -710,7 +656,7 @@ This model does not describe polarization-resolved differences as $\Delta E$ is 
 This is not consistent with the experimental observations, where the splitting is dependent on the polarization angle.\\
 Nevertheless, by taking into account only one polarization, the model describes the data shown in \autoref{fig:NiPS3 model}.
 Even the same $H_\text{sf} = \SI{10.55}{T}$ and $g=\SI{2.0}{}$ from \autocite{NiPS3_magnon_gap} are found to correctly fit the data.\\
-Within this model, the overlaid splitting curves in \autoref{fig:NiPS3 10K multiple flakes} can be understood as poly-crystalline or cracked flakes with rotated orientations of the $a$ and $b$ crystal axis and therefore different splitting curves.
+Within this model, the overlaid splitting curves in \autoref{fig:NiPS3 10K multiple flakes} can be understood as polycrystalline flakes with rotated orientations of the $a$ and $b$ crystal axis and therefore different splitting curves.
 This was confirmed by manufacturing a sample with more exfoliation steps to get thinner flakes, which yielded clearer splitting curves.
 
 The non-zero linear polarisation degree of the observed photoluminescence is related to the nature of the underlying optical transition.
